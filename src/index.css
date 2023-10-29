@@ -12,7 +12,7 @@ code {
     monospace;
 }
 body {
-  background-image: url('.\assets\sunrise-1014712_1280.jpg');
+  background-image: url('./assets/sunrise-1014712_1280.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -115,4 +115,14 @@ body {
   position: relative;
   transform: skew(-20deg);
   overflow: hidden;
+}
+
+@media screen and (min-device-width:650px) {
+  .summary-box{
+    font-size: 20px;
+  }
+  .container{
+    font-size: 20px;
+    padding: 150px;
+  }
 }
