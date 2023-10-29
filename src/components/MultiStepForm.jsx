@@ -6,6 +6,7 @@ import { Interests } from "./InterestQuestion";
 import { TypeOfTrip } from "./TypeTripQuestion";
 import { Summary } from "./Summary";
 
+
 export const MultiStepForm = () => {
   // State to store form data
   const [formData, setFormData] = useState({
@@ -76,25 +77,30 @@ export const MultiStepForm = () => {
   ];
 
   return (
-    <div>
-      {currentStep === 6 ? (
-        <Summary
-          name={formData.name}
-          email={formData.email}
-          generalInterest={formData.generalInterest}
-          typeOfTrip={formData.tripType}
-        />
-      ) : (
-        steps.find((step) => step.step === currentStep)?.component
-      )}
-      {currentStep !== 1 && currentStep !== 6 && (
-        <div className="multi-step-form">
-          {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-          <button onClick={currentStep === 5 ? submitForm : nextStep}>
-            {currentStep === 5 ? "Submit" : "Next"}
-          </button>
-        </div>
-      )}
-    </div>
+    <section className="section">
+      <div className="section-child">
+        {currentStep === 6 ? (
+          <Summary
+            name={formData.name}
+            email={formData.email}
+            generalInterest={formData.generalInterest}
+            typeOfTrip={formData.tripType}
+          />
+        ) : (
+          steps.find((step) => step.step === currentStep)?.component
+        )}
+        {currentStep !== 1 && currentStep !== 6 && (
+          <div className="multi-step-form">
+            {currentStep > 1 && <button className="back-button" onClick={prevStep}>Back</button>}
+
+            <button className={currentStep === 5 ? "submit-button" : "next-button"}
+            onClick={currentStep === 5 ? submitForm : nextStep}>
+              {currentStep === 5 ? "Submit" : "Next"}
+            </button>
+          </div>
+        )}
+        
+      </div>
+    </section>
   );
 };

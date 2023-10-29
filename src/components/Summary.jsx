@@ -13,7 +13,7 @@ export const Summary = ({ name, email,generalInterest,typeOfTrip }) => {
             <h5>Triptype: <span>{typeOfTrip}</span></h5>
             
           </div>
-          <p className="next-line">Thank you! I will be reaching out to you soon to schedule
+          <p className="thank-you-title">Thank you! I will be reaching out to you soon to schedule
     consultation </p>
         </div>
       </div>
