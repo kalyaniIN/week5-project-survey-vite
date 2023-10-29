@@ -16,6 +16,8 @@ If I had more time I would definitely make the survey a bit more complex using c
 
 ### View it live
 
+Deployed link of the project : https://week5-travel-survey.netlify.app/
+
 
 
 

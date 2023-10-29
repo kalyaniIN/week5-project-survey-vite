@@ -16,6 +16,7 @@ body {
   background-size: cover; 
   background-repeat: no-repeat;
   background-attachment: fixed;
+
 }
 
 .emoji {
@@ -33,8 +34,8 @@ body {
   padding: 0 5em;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  
+ 
 }
 
 
@@ -44,7 +45,7 @@ body {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
   font-weight: bold;
-  line-height: 1.7em;
+  /* line-height: 1.7em; */
   background-color:rgba(129, 110, 110, 0.639);
   padding: 2em;
 }
@@ -54,6 +55,7 @@ body {
   padding: .8em;
   margin-top: 2.5em;
   font-size: 14px;
+  margin-right: 5px;
 }
 
 .countmein-button,.back-button,.next-button,.submit-button{
@@ -108,21 +110,59 @@ body {
   font-weight: 700;
 }
 .footer-display {
- color: white;
+ color:white;
  font-weight: 400;
   max-width: 350px;
   margin: 30px auto 0 auto;
-  position: relative;
+  position: absolute;
   transform: skew(-20deg);
   overflow: hidden;
 }
 
-@media screen and (min-device-width:650px) {
-  .summary-box{
+
+/* Responsive styles for screens with a minimum width of 650px */
+@media screen and (min-width: 650px) {
+  .summary-box {
     font-size: 20px;
   }
-  .container{
+  .container {
     font-size: 20px;
     padding: 150px;
+    height: 100vh;
   }
 }
+
+/* Responsive styles for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 480px) {
+  body {
+    background-size: contain; /* Adjust background size for smaller screens */
+  }
+
+  .section {
+    padding: 0 1em; /* Adjust padding for smaller screens */
+  }
+
+  .section-child {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .countmein-button,
+  .back-button,
+  .next-button,
+  .submit-button {
+    font-size: 12px; /* Adjust button font size for smaller screens */
+    padding: 0.6em;
+    margin-top: 1.5em;
+  }
+
+  .summary-box {
+    font-size: 18px; /* Adjust font size for summary box on smaller screens */
+  }
+
+  .footer-display {
+    max-width: 100%; /* Make footer width responsive for smaller screens */
+    padding: 0.5em;
+    font-size: 16px;
+  }
+}
+
